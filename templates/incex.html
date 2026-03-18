@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>IMC</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>==CALCULADORA DE IMC</h1>
+        <p>INGRESA TUS DATOS</p>
+
+        <form action="/calcular" method="POST">
+            <input type="number" step="0.01" name="altura" placeholder="INGRESA TU ALTURA" required>
+            <input type="number" step="0.1" name="peso" placeholder="INGRESA TU PESO" required>
+
+            <button type="submit">Calcular</button>
+        </form>
+
+        {% if imc %}
+        <h2>haciendo calculos....</h2>
+        <h3>{{ imc }}</h3>
+        <p style="color: {{ color }}">
+            {{ resultado }}</p>
+        {% endif %}
+
+    </div>
+
+</body>
+
+</html>
