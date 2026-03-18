@@ -27,7 +27,7 @@ def calcular():
         color = "gold"
     elif IMC >= 22:
         resultado = "Estas en el peso correcto"
-        color = "verde"
+        color = "green"
     elif IMC >= 18.5:
         resultado = "Estas en bajo peso"
         color = "blue"
@@ -35,7 +35,7 @@ def calcular():
         resultado = "ESTAS EN DESNUTRICION"
         color = "black"
 
-    return render_template("incex.html", imc=round(IMC, 2), resultado=resultado)
+    return render_template("incex.html", imc=round(IMC, 2), resultado=resultado, color=color)
 
 
 if __name__ == "__main__":
